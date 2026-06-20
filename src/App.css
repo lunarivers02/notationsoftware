@@ -1,0 +1,151 @@
+* { box-sizing: border-box; }
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #1a1a1a;
+}
+
+.app-header { margin-bottom: 16px; }
+
+.title-input {
+  font-size: 22px;
+  font-weight: 600;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 4px 0;
+  width: 100%;
+  background: transparent;
+}
+.title-input:focus {
+  outline: none;
+  border-bottom: 2px solid #4a6fff;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f5f6f8;
+  border: 1px solid #e0e2e7;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.toolbar-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #666;
+  margin-right: 6px;
+  min-width: 64px;
+}
+
+.octave-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.octave-label {
+  font-size: 11px;
+  color: #999;
+  width: 14px;
+}
+
+.btn {
+  border: 1px solid #d0d2d8;
+  background: white;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.btn:hover { background: #eef0ff; border-color: #4a6fff; }
+.btn-active {
+  background: #4a6fff;
+  color: white;
+  border-color: #4a6fff;
+}
+.btn-pitch { padding: 6px 10px; min-width: 32px; }
+.btn-small { padding: 4px 10px; font-size: 12px; }
+.btn-danger { color: #d33; }
+.btn-danger:hover { background: #fee; border-color: #d33; }
+
+.instructions {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.score {
+  background: white;
+  border: 1px solid #e0e2e7;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.instrument-row { margin-bottom: 28px; }
+.instrument-row:last-child { margin-bottom: 0; }
+
+.instrument-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.staff-wrap {
+  position: relative;
+}
+
+.staff {
+  line-height: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.staff svg {
+  pointer-events: none;
+}
+
+.measure-click-overlay {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  bottom: 0;
+  display: flex;
+  z-index: 0;
+}
+
+.measure-click-zone {
+  width: 220px;
+  height: 150px;
+  cursor: crosshair;
+}
+.measure-click-zone:hover {
+  background: rgba(74, 111, 255, 0.06);
+}
+
+.add-instrument-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
